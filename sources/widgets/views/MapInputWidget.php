@@ -20,13 +20,13 @@ use yii\helpers\Url;
 use yii\web\View;
 
 // Register asset bundle
-\kolyunya\yii2\assets\MapInputAsset::register($this);
+\hector68\yii2\assets\MapInputAsset::register($this);
 
 // [BEGIN] - Map input widget container
 echo Html::beginTag(
     'div',
     [
-        'class' => 'kolyunya-map-input-widget',
+        'class' => 'hector68-map-input-widget',
         'style' => "width: $width; height: $height;",
         'id' => $id,
         'data' =>
@@ -48,7 +48,7 @@ echo Html::activeHiddenInput(
     $model,
     $attribute,
     [
-        'class' => 'kolyunya-map-input-widget-input',
+        'class' => 'hector68-map-input-widget-input',
     ]
 );
 
@@ -58,7 +58,7 @@ echo Html::input(
     null,
     null,
     [
-        'class' => 'kolyunya-map-input-widget-search-bar',
+        'class' => 'hector68-map-input-widget-search-bar',
     ]
 );
 
@@ -67,7 +67,7 @@ echo Html::tag(
     'div',
     '',
     [
-        'class' => 'kolyunya-map-input-widget-canvas',
+        'class' => 'hector68-map-input-widget-canvas',
     ]
 );
 

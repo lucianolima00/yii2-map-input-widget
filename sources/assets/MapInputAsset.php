@@ -1,13 +1,13 @@
 <?php
 
-namespace kolyunya\yii2\assets;
+namespace hector68\yii2\assets;
 
 class MapInputAsset extends \yii\web\AssetBundle
 {
 
     public static $key;
 
-    public $sourcePath = '@kolyunya/yii2-map-input-widget/sources/web';
+    public $sourcePath = '@hector68/yii2-map-input-widget/sources/web';
 
     public $depends =
     [
