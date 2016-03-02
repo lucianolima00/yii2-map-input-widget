@@ -12,6 +12,7 @@
  * @var string $alignMapCenter
  * @var string $enableSearchBar
  * @var string $attribute
+ * @var string $description
  * @var View $this
  */
 
@@ -34,6 +35,7 @@ echo Html::beginTag(
                 'latitude' => $latitude,
                 'longitude' => $longitude,
                 'zoom' => $zoom,
+                'description' => $description,
                 'pattern' => $pattern,
                 'map-type' => $mapType,
                 'animate-marker' => $animateMarker,
@@ -56,7 +58,7 @@ echo Html::activeHiddenInput(
 echo Html::input(
     'text',
     null,
-    null,
+    $description,
     [
         'class' => 'hector68-map-input-widget-search-bar',
     ]

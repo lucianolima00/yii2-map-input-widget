@@ -15,6 +15,8 @@ class MapInputWidget extends \yii\widgets\InputWidget
 
     public $zoom = 0;
 
+    public $description = "";
+
     public $width = '100%';
 
     public $height = '300px';
@@ -55,6 +57,7 @@ class MapInputWidget extends \yii\widgets\InputWidget
                 'animateMarker' => $this->animateMarker,
                 'alignMapCenter' => $this->alignMapCenter,
                 'enableSearchBar' => $this->enableSearchBar,
+                'description' => $this->description
             ]
         );
     }

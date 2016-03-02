@@ -1,7 +1,7 @@
 function MapInputWidgetManager()
 {
 
-    const widgetSelector = '.kolyunya-map-input-widget';
+    const widgetSelector = '.hector68-map-input-widget';
 
     var self = this;
 
@@ -51,11 +51,11 @@ function MapInputWidgetManager()
 function MapInputWidget ( widget )
 {
 
-    const inputSelector = 'input.kolyunya-map-input-widget-input';
+    const inputSelector = 'input.hector68-map-input-widget-input';
 
-    const searchBarSelector = 'input.kolyunya-map-input-widget-search-bar';
+    const searchBarSelector = 'input.hector68-map-input-widget-search-bar';
 
-    const canvasSelector = 'div.kolyunya-map-input-widget-canvas';
+    const canvasSelector = 'div.hector68-map-input-widget-canvas';
 
     var self = this;
 
@@ -352,6 +352,16 @@ function MapInputWidget ( widget )
     this.getMap = function()
     {
         return map;
-    }
+    };
+
+    this.getSearchBar = function()
+    {
+        return searchBar;
+    };
+
+    this.getInput = function()
+    {
+        return input;
+    };
 
 };
