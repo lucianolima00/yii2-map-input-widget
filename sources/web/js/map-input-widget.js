@@ -85,41 +85,43 @@ function MapInputWidget ( widget )
                 center: getInitialMapCenter(),
                 zoom: $(widget).data('zoom'),
                 styles:
-                [
-                    {
-                        featureType: "poi",
-                        stylers:
-                        [
-                            {
-                                visibility: "off",
-                            },
-                        ],
-                    },
-                ],
-                mapTypeControlOptions :
-                {
-                    mapTypeIds:
                     [
+                        {
+                            featureType: "poi",
+                            stylers:
+                                [
+                                    {
+                                        visibility: "off",
+                                    },
+                                ],
+                        },
                     ],
-                },
+                mapTypeControlOptions :
+                    {
+                        mapTypeIds:
+                            [
+                            ],
+                    },
             }
         );
 
-        google.maps.event.addListener
-        (
-            map,
-            'click',
-            function ( click )
-            {
-                self.setPosition
-                (
-                    {
-                        latitude: click.latLng.lat(),
-                        longitude: click.latLng.lng(),
-                    }
-                );
-            }
-        );
+        if ($(widget).data('readonly') !== 1) {
+
+            google.maps.event.addListener
+            (
+                map,
+                'click',
+                function (click) {
+                    self.setPosition
+                    (
+                        {
+                            latitude: click.latLng.lat(),
+                            longitude: click.latLng.lng(),
+                        }
+                    );
+                }
+            );
+        }
 
     };
 
@@ -151,11 +153,11 @@ function MapInputWidget ( widget )
             }
         );
         // Prevent enter key from submitting the form
-        google.maps.event.addDomListener(searchBar, 'keydown', function(e) { 
-            if (e.keyCode == 13) { 
-                e.preventDefault(); 
+        google.maps.event.addDomListener(searchBar, 'keydown', function(e) {
+            if (e.keyCode == 13) {
+                e.preventDefault();
             }
-        }); 
+        });
     }
 
     var makePointString = function ( pointData )
@@ -236,7 +238,7 @@ function MapInputWidget ( widget )
         if
         (
             pointData.latitude !== undefined
-                &&
+            &&
             pointData.longitude !== undefined
         )
         {
@@ -315,20 +317,22 @@ function MapInputWidget ( widget )
             {
                 map: map,
                 position: point,
-                draggable: true,
+                draggable: ($(widget).data('readonly') !== 1),
                 animation: markerAnimation,
             }
         );
 
-        google.maps.event.addListener
-        (
-            map.marker,
-            'dragend',
-            function()
-            {
-                self.setPosition(this.getPosition());
-            }
-        );
+        if ($(widget).data('readonly') !== 1) {
+
+            google.maps.event.addListener
+            (
+                map.marker,
+                'dragend',
+                function () {
+                    self.setPosition(this.getPosition());
+                }
+            );
+        }
 
         var pattern = $(widget).data('pattern');
 

@@ -1,4 +1,5 @@
 #!/bin/sh
+#First install npm and then uglify-es (npm install uglify-es -g)
 cd ../sources/web
-yui-compressor js/map-input-widget.js > js/map-input-widget.min.js
-yui-compressor css/map-input-widget.css > css/map-input-widget.min.css
+uglifyjs map-input-widget.js -c  -o map-input-widget.min.js
+uglifyjs map-input-widget.css -c  -o map-input-widget.min.css

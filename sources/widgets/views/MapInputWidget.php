@@ -13,6 +13,7 @@
  * @var string $enableSearchBar
  * @var string $attribute
  * @var string $description
+ * @var string $readonly
  * @var View $this
  */
 
@@ -41,6 +42,7 @@ echo Html::beginTag(
                 'animate-marker' => $animateMarker,
                 'align-map-center' => $alignMapCenter,
                 'enable-search-bar' => $enableSearchBar,
+                'readonly' => $readonly,
             ],
     ]
 );

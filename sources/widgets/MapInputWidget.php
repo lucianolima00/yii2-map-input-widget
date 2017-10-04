@@ -33,10 +33,15 @@ class MapInputWidget extends \yii\widgets\InputWidget
 
     public $viewFile = 'MapInputWidget';
 
+    public $readonly = false;
+
     public function run()
     {
 
         Yii::setAlias('@hector68','@vendor/hector68');
+
+        if ($this->readonly)
+            $this->enableSearchBar = false;
 
         // Asset bundle should be configured with the application key
         $this->configureAssetBundle();
@@ -57,7 +62,8 @@ class MapInputWidget extends \yii\widgets\InputWidget
                 'animateMarker' => $this->animateMarker,
                 'alignMapCenter' => $this->alignMapCenter,
                 'enableSearchBar' => $this->enableSearchBar,
-                'description' => $this->description
+                'description' => $this->description,
+                'readonly' => $this->readonly,
             ]
         );
     }
