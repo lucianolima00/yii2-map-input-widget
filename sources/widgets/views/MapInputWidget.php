@@ -13,6 +13,7 @@
  * @var string $enableSearchBar
  * @var string $attribute
  * @var string $description
+ * @var string $readonly
  * @var View $this
  */
 
@@ -41,16 +42,18 @@ echo Html::beginTag(
                 'animate-marker' => $animateMarker,
                 'align-map-center' => $alignMapCenter,
                 'enable-search-bar' => $enableSearchBar,
+                'readonly' => $readonly,
             ],
     ]
 );
 
 // The actual hidden input
-echo Html::activeHiddenInput(
+// Almir - alterado de hidden para activeTextInput e adicionada a classe hidden.
+echo Html::activeTextInput(
     $model,
     $attribute,
     [
-        'class' => 'hector68-map-input-widget-input',
+        'class' => 'hector68-map-input-widget-input hidden',
     ]
 );
 
