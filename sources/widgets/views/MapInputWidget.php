@@ -48,11 +48,12 @@ echo Html::beginTag(
 );
 
 // The actual hidden input
-echo Html::activeHiddenInput(
+// Almir - alterado de hidden para activeTextInput e adicionada a classe hidden.
+echo Html::activeTextInput(
     $model,
     $attribute,
     [
-        'class' => 'hector68-map-input-widget-input',
+        'class' => 'hector68-map-input-widget-input hidden',
     ]
 );
 

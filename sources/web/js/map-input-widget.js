@@ -291,7 +291,7 @@ function MapInputWidget ( widget )
         if ( pointData === null )
         {
             // Disable the input in order not to send it in POST array
-            $(input).prop('disabled',true);
+            //$(input).prop('disabled',true);   //Almir - linha comentada para que fosse possível fazer a client validation corretamente.
             return;
         }
         else
