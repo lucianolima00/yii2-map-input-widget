@@ -160,15 +160,10 @@ function MapInputWidget ( widget )
                 {
                     var placeLocation = placeGeometry.location;
                     self.setPosition(placeLocation);
+                    map.setCenter(placeLocation)
                 }
             }
         );
-        // Prevent enter key from submitting the form
-        google.maps.event.addDomListener(searchBar, 'keydown', function(e) {
-            if (e.keyCode == 13) {
-                e.preventDefault();
-            }
-        });
     }
 
     var makePointString = function ( pointData )
