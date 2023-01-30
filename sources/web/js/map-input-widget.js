@@ -73,7 +73,7 @@ function MapInputWidget ( widget )
 
         $(input).change(
             function () {
-                const latLng = $(widget).val().replace(/[()]/g, '').split(',');
+                const latLng = $(this).val().replace(/[()]/g, '').split(',');
                 self.setPosition
                 (
                     {
@@ -136,8 +136,6 @@ function MapInputWidget ( widget )
                 }
             );
         }
-
-        return map;
     };
 
     var initializeWidget = function()
