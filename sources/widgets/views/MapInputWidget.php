@@ -49,7 +49,7 @@ echo Html::beginTag(
 
 // The actual hidden input
 // Almir - alterado de hidden para activeTextInput e adicionada a classe hidden.
-echo Html::activeTextInput(
+echo Html::activeHiddenInput(
     $model,
     $attribute,
     [

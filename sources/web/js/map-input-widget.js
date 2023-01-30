@@ -70,6 +70,20 @@ function MapInputWidget ( widget )
     var initializeComponents = function()
     {
         input = $(widget).find(inputSelector).get(0);
+
+        $(input).change(
+            function () {
+                const latLng = $(widget).val().replace(/[()]/g, '').split(',');
+                self.setPosition
+                (
+                    {
+                        latitude: latLng[0],
+                        longitude: latLng[1],
+                    }
+                );
+            }
+        );
+
         searchBar = $(widget).find(searchBarSelector).get(0);
         canvas = $(widget).find(canvasSelector).get(0);
     };
@@ -123,6 +137,7 @@ function MapInputWidget ( widget )
             );
         }
 
+        return map;
     };
 
     var initializeWidget = function()
