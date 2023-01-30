@@ -14,7 +14,7 @@
     ],
     "homepage": "https://github.com/lucianolima00/yii2-map-input-widget",
     "type": "yii2-extension",
-    "license": "GNU GPL v3.0",
+    "license": "GPL-3.0-only",
     "authors":
     [
         {
