@@ -40,7 +40,7 @@ class MapInputAsset extends \yii\web\AssetBundle
             'key' => self::$key,
             'callback' => 'initMap',
             'libraries' => 'places',
-            'language' => $language,
+            'language' => self::language,
         ]);
         return $scriptUrl;
     }
