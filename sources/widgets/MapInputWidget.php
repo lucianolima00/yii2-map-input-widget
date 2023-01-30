@@ -9,6 +9,8 @@ class MapInputWidget extends \yii\widgets\InputWidget
 
     public $key;
 
+    public $language = 'pt-BR';
+
     public $latitude = 0;
 
     public $longitude = 0;
@@ -71,5 +73,6 @@ class MapInputWidget extends \yii\widgets\InputWidget
     private function configureAssetBundle()
     {
         \lucianolima00\yii2\assets\MapInputAsset::$key = $this->key;
+        \lucianolima00\yii2\assets\MapInputAsset::$language = $this->language;
     }
 }
