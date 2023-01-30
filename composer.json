@@ -1,6 +1,6 @@
 {
-    "name": "hector68/yii2-map-input-widget",
-    "description": "Fork of Yii2 map input widget. Allows you to select geographcal coordinates via a human-friendly inteface.",
+    "name": "lucianolima00/yii2-map-input-widget",
+    "description": "Yii2 map input widget. Allows you to select geographcal coordinates via a human-friendly inteface.",
     "keywords":
     [
         "yii2",
@@ -12,22 +12,22 @@
         "geo-coordinates",
         "coordinates"
     ],
-    "homepage": "https://github.com/Hector68/yii2-map-input-widget",
+    "homepage": "https://github.com/lucianolima00/yii2-map-input-widget",
     "type": "yii2-extension",
     "license": "GNU GPL v3.0",
     "authors":
     [
         {
-            "name": "Oleynikov Nikolay",
-            "email": "OleynikovNY@mail.ru",
-            "homepage": "http://github.com/Kolyunya/"
+            "name": "Luciano Lima",
+            "email": "l.lima00@outlook.com",
+            "homepage": "http://github.com/lucianolima00/"
         }
     ],
     "autoload":
     {
         "psr-4":
         {
-            "hector68\\yii2\\": "sources"
+            "lucianolima00\\yii2\\": "sources"
         }
     }
 }

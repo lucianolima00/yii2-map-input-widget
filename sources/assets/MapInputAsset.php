@@ -1,13 +1,14 @@
 <?php
 
-namespace hector68\yii2\assets;
+namespace lucianolima00\yii2\assets;
 
 class MapInputAsset extends \yii\web\AssetBundle
 {
 
     public static $key;
+    public static $language = 'pt-BR';
 
-    public $sourcePath = '@hector68/yii2-map-input-widget/sources/web';
+    public $sourcePath = '@lucianolima00/yii2-map-input-widget/sources/web';
 
     public $depends =
     [
@@ -37,7 +38,9 @@ class MapInputAsset extends \yii\web\AssetBundle
         $scriptUrl  =  "//maps.googleapis.com/maps/api/js?";
         $scriptUrl .= http_build_query([
             'key' => self::$key,
+            'callback' => 'initMap',
             'libraries' => 'places',
+            'language' => $language,
         ]);
         return $scriptUrl;
     }

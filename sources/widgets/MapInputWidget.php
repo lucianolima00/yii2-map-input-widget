@@ -1,6 +1,6 @@
 <?php
 
-namespace hector68\yii2\widgets;
+namespace lucianolima00\yii2\widgets;
 
 use Yii;
 
@@ -38,7 +38,7 @@ class MapInputWidget extends \yii\widgets\InputWidget
     public function run()
     {
 
-        Yii::setAlias('@hector68','@vendor/hector68');
+        Yii::setAlias('@lucianolima00','@vendor/lucianolima00');
 
         if ($this->readonly)
             $this->enableSearchBar = false;
@@ -70,6 +70,6 @@ class MapInputWidget extends \yii\widgets\InputWidget
 
     private function configureAssetBundle()
     {
-        \hector68\yii2\assets\MapInputAsset::$key = $this->key;
+        \lucianolima00\yii2\assets\MapInputAsset::$key = $this->key;
     }
 }

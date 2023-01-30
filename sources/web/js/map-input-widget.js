@@ -1,7 +1,7 @@
 function MapInputWidgetManager()
 {
 
-    const widgetSelector = '.hector68-map-input-widget';
+    const widgetSelector = '.lucianolima00-map-input-widget';
 
     var self = this;
 
@@ -51,11 +51,11 @@ function MapInputWidgetManager()
 function MapInputWidget ( widget )
 {
 
-    const inputSelector = 'input.hector68-map-input-widget-input';
+    const inputSelector = 'input.lucianolima00-map-input-widget-input';
 
-    const searchBarSelector = 'input.hector68-map-input-widget-search-bar';
+    const searchBarSelector = 'input.lucianolima00-map-input-widget-search-bar';
 
-    const canvasSelector = 'div.hector68-map-input-widget-canvas';
+    const canvasSelector = 'div.lucianolima00-map-input-widget-canvas';
 
     var self = this;
 
@@ -134,9 +134,7 @@ function MapInputWidget ( widget )
 
     var initializeSearchBar = function()
     {
-        var searchBarIsEnabled = $(widget).data('enable-search-bar');
-        var searchBarIsHidden = !searchBarIsEnabled;
-        $(searchBar).prop('hidden',searchBarIsHidden);
+        $(searchBar).prop('hidden', (typeof $(widget).data('enable-search-bar') === 'undefined'));
         searchBarAutocomplete = new google.maps.places.Autocomplete(searchBar);
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchBar);
         google.maps.event.addListener(

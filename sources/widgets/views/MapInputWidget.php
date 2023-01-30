@@ -22,13 +22,13 @@ use yii\helpers\Url;
 use yii\web\View;
 
 // Register asset bundle
-\hector68\yii2\assets\MapInputAsset::register($this);
+\lucianolima00\yii2\assets\MapInputAsset::register($this);
 
 // [BEGIN] - Map input widget container
 echo Html::beginTag(
     'div',
     [
-        'class' => 'hector68-map-input-widget',
+        'class' => 'lucianolima00-map-input-widget',
         'style' => "width: $width; height: $height;",
         'id' => $id,
         'data' =>
@@ -53,7 +53,7 @@ echo Html::activeTextInput(
     $model,
     $attribute,
     [
-        'class' => 'hector68-map-input-widget-input hidden',
+        'class' => 'lucianolima00-map-input-widget-input hidden',
     ]
 );
 
@@ -63,7 +63,7 @@ echo Html::input(
     null,
     $description,
     [
-        'class' => 'hector68-map-input-widget-search-bar',
+        'class' => 'lucianolima00-map-input-widget-search-bar',
     ]
 );
 
@@ -72,7 +72,7 @@ echo Html::tag(
     'div',
     '',
     [
-        'class' => 'hector68-map-input-widget-canvas',
+        'class' => 'lucianolima00-map-input-widget-canvas',
     ]
 );
 
